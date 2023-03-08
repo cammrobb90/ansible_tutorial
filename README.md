@@ -29,7 +29,6 @@ alias ssha='eval $(ssh-agent) && ssh-add'
 nano/vi .bashrc
 
 # GIT commands
-# GIT commands
 git add FILE.ext
 git status
 git commit -m "commit message"
@@ -41,4 +40,18 @@ git config --global user.email "cammrobb@gmail.com"
 # Ansible commands
 ansible all --key-file ~/.ssh/ansible -i inventory -m ping
 ansible all --list-hosts
-ansible all -m gather_facts --limit ip.ad.dr.ess
+
+> Gather facts for VMs
+ansible all -m gather_facts 
+
+> Update apt cache
+ansible all -m apt -a update_cache=true
+
+> Upgrade
+ansible all -m apt -a upgrade=yes
+
+> Flag to limit to a single device
+--limit ip.ad.dr.ess
+
+> run elevated commands
+--become --ask-become-pass
