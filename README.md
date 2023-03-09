@@ -55,3 +55,15 @@ ansible all -m apt -a upgrade=yes
 
 > run elevated commands
 --become --ask-become-pass
+
+> when
+when: ansible_distribution == "Distro"
+
+when: ansible_distribution in ["Debian", "Ubuntu"]
+
+
+USE GETS FACTS TO CREATE A TXT FILE
+
+USE PYTHON TO PULL RELEVANT INFO OUT TEXT FILE 
+
+CREATE ASSET REGISTER?
