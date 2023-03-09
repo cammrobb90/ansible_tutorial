@@ -10,5 +10,6 @@
 
   - name: upgrade installed progs
     apt:
-      name: all
+      upgrade: all
       state: latest
+
