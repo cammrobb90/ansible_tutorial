@@ -8,7 +8,10 @@
     apt:
       update_cache: yes
 
-  - name: install prometheus package
-    apt:
-      name: prometheus
-      state: latest
+  - name: install prometheus node
+    action: shell wget wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+    action: shell tar xvf node_exporter-1.3.1.linux-amd64.tar.gz
+    action: cd node_exporter-1.3.1.linux-amd64
+    action: sudo cp node_exporter /usr/local/bin
+    action: useradd --no-create-home --shell /bin/false node_exporter
+    action: chown node_exporter:node_exporter /usr/local/bin/node_exporter
