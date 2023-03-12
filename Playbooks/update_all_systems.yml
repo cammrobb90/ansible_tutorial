@@ -8,7 +8,7 @@
     apt:
       update_cache: yes
 
-  - name: upgrade installed progs
+  - name: upgrade everything
     apt:
       upgrade: yes
       state: latest
