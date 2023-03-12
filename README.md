@@ -6,9 +6,12 @@
 192.168.1.52
 
 ## Ubuntu VMs
-192.168.1.71
-192.168.1.8
-192.168.1.127
+ubuntusrv1: 192.168.1.71
+ubuntusrv2: 192.168.1.8
+ubuntusrv3: 192.168.1.127
+grafanavm: 192.168.1.184
+
+
 
 # Useful commands
 
