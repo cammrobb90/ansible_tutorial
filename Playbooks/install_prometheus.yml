@@ -14,5 +14,8 @@
   - name: unzip file
     action: shell tar xvf node_exporter-1.5.0.linux-armv7.tar.gz
 
+  - name: move node_exporter
+    action: cp node_exporter-1.5.0.linux-armv7/node_exporter /home/cameron/node_exporter
+
   - name: start node exporter
-    action: node_exporter-1.5.0.linux-armv7/./node_exporter
+    action: ./node_exporter
